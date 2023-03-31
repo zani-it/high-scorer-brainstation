@@ -1,49 +1,53 @@
-
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 import rapitorsLogo from "./assets/media/rap.png";
 import "./assets/styles/_pool.scss";
 import philadelphiaLogo from "./assets/media/phil.png";
+import Content from "./components/Content/Content";
 function App() {
+  let page = "home"
+
   return (
-    <div className="news-pool pool_background">
-      <div className="team__logos horizontal">
-        <div className="logo__item"><img src={rapitorsLogo}/> <p>38-38</p></div>
-        <div className="vs__text">
-          <h1>VS.</h1>
+    <div>
+      <Header page={page}/>
+      <div className="news-pool pool_background">
+        <div className="team__logos horizontal">
+          <div className="logo__item"><img src={rapitorsLogo}/> <p>38-38</p></div>
+          <div className="vs__text">
+            <h1>VS.</h1>
+          </div>
+          <div className="logo__item"><img src={philadelphiaLogo}/><p>50-26</p> </div>
         </div>
-        <div className="logo__item"><img src={philadelphiaLogo}/><p>50-26</p> </div>
-      </div>
-      <div className="hero__text">
-        <h1>Who will win tonight's game?</h1>
-      </div>
-      <div className="pool__results">
-
-    <div className="horizontal">
-          <div className="results__text">
-            <p>40%</p>
-          </div>
-          <div className="results__text">
-            <p>Toronto Raptors</p>
-          </div>
+        <div className="hero__text">
+          <h1>Who will win tonight's game?</h1>
         </div>
-
-        <div className="pool__results-bar"></div>
-
-        <div className="horizontal">
-          <div className="results__text">
-            <p>60%</p>
+        <div className="pool__results">
+      <div className="horizontal">
+            <div className="results__text">
+              <p>40%</p>
+            </div>
+            <div className="results__text">
+              <p>Toronto Raptors</p>
+            </div>
           </div>
-          <div className="results__text">
-            <p>Philadelphia 76ers</p>
+          <div className="pool__results-bar"></div>
+          <div className="horizontal">
+            <div className="results__text">
+              <p>60%</p>
+            </div>
+            <div className="results__text">
+              <p>Philadelphia 76ers</p>
+            </div>
           </div>
-        </div>
-
-        <div className="pool__results-bar-2"></div>
-
-        <div className="results__votes">
-          <p>total Votes:25 - 4 hours left</p>
+          <div className="pool__results-bar-2"></div>
+          <div className="results__votes">
+            <p>total Votes:25 - 4 hours left</p>
+          </div>
         </div>
       </div>
+      <Content page={page}/>
+      <Footer page={page}/>
     </div>
   );
 }
