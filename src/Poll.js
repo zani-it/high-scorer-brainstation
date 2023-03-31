@@ -15,7 +15,7 @@ function Poll() {
         <div className="logo__item"><img src={philadelphiaLogo}/><p>50-26</p> </div>
       </div>
       <div className="hero__text">
-        <h1>Who will win tonight's game?</h1>
+        <h1 className = "who">Who will win tonight's game?</h1>
       </div>
       <div className="pool__results">
 
@@ -42,7 +42,7 @@ function Poll() {
         <div className="pool__results-bar-2"></div>
 
         <div className="results__votes">
-          <p>total Votes:25 - 4 hours left</p>
+          <p>total Votes: 25 - 4 hours left</p>
         </div>
       </div>
     </div>

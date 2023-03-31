@@ -18,7 +18,7 @@ const PollBefore = () => {
         </div>
       </div>
       <div className="hero__text">
-        <h1>Who will win tonight's game?</h1>
+      <h1 className = "who">Who will win tonight's game?</h1>
       </div>
       <div className="pool__results1">
         <div className="horizontal">
@@ -37,7 +37,7 @@ const PollBefore = () => {
         </div>
 
         <div className="results__votes1">
-          <p>total Votes:25 - 4 hours left</p>
+          <p>total Votes: 25 - 4 hours left</p>
           <Link to = "/bet" className = "vote__button">Vote</Link>
         </div>
       </div>
