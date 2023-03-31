@@ -1,0 +1,11 @@
+.header {
+    width: 390px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+
+    &__image {
+        width: 100%;
+        display: block;
+    }
+}

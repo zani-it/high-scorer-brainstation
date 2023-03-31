@@ -1,0 +1,26 @@
+.footer {
+    height: 62px;
+    width: 390px;
+    position: fixed;
+    bottom: 0;
+
+    &__image {
+        width: 100%;
+        display: block;
+    }
+
+    &__icon-container {
+        height:25px;
+        position: absolute;
+        right: 92px;
+        top: 9px;
+        background-color: #09090A;
+        width: 50px;
+    }
+
+    &__icon {
+        
+        display: block;
+        margin: 0 auto;
+    }
+}
