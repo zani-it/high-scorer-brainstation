@@ -1,51 +1,17 @@
+import React from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import BetPage from "./BetPage"
+import HomePage from "./HomePage"
 
-import "./App.css";
-import rapitorsLogo from "./assets/media/rap.png";
-import "./assets/styles/_pool.scss";
-import philadelphiaLogo from "./assets/media/phil.png";
-function App() {
+const App = () => {
   return (
-    <div className="news-pool pool_background">
-      <div className="team__logos horizontal">
-        <div className="logo__item"><img src={rapitorsLogo}/> <p>38-38</p></div>
-        <div className="vs__text">
-          <h1>VS.</h1>
-        </div>
-        <div className="logo__item"><img src={philadelphiaLogo}/><p>50-26</p> </div>
-      </div>
-      <div className="hero__text">
-        <h1>Who will win tonight's game?</h1>
-      </div>
-      <div className="pool__results">
-
-    <div className="horizontal">
-          <div className="results__text">
-            <p>40%</p>
-          </div>
-          <div className="results__text">
-            <p>Toronto Raptors</p>
-          </div>
-        </div>
-
-        <div className="pool__results-bar"></div>
-
-        <div className="horizontal">
-          <div className="results__text">
-            <p>60%</p>
-          </div>
-          <div className="results__text">
-            <p>Philadelphia 76ers</p>
-          </div>
-        </div>
-
-        <div className="pool__results-bar-2"></div>
-
-        <div className="results__votes">
-          <p>total Votes:25 - 4 hours left</p>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path = "/" element = {<HomePage/>}></Route>
+      <Route path = "/bet" element = {<BetPage/>}></Route>
+    </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
