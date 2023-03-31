@@ -6,9 +6,11 @@ import "./assets/styles/_pool.scss";
 import philadelphiaLogo from "./assets/media/phil.png";
 import Content from "./components/Content/Content";
 function App() {
+  let page = "home"
+
   return (
     <div>
-      <Header/>
+      <Header page={page}/>
       <div className="news-pool pool_background">
         <div className="team__logos horizontal">
           <div className="logo__item"><img src={rapitorsLogo}/> <p>38-38</p></div>
@@ -44,8 +46,8 @@ function App() {
           </div>
         </div>
       </div>
-      <Content/>
-      <Footer/>
+      <Content page={page}/>
+      <Footer page={page}/>
     </div>
   );
 }

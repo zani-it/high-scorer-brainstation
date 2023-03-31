@@ -1,11 +1,22 @@
 import homeContent from '../../assets/images/home-content.png'
-import betontent from '../../assets/images/bet-content.png'
+import betContent from '../../assets/images/bet-content.png'
 import './Content.scss'
 
-export default function Content() {
+export default function Content(props) {
+
+    let contentSrc = "";
+
+    if (props.page === "home") {
+        contentSrc = homeContent
+    }
+
+    if (props.page === "bet") {
+        contentSrc = betContent
+    }
+
     return (
-        <header className="content">
-            <img className="content__image" src={homeContent}/>
-        </header>
+        <dev className="content">
+            <img className="content__image" src={contentSrc}/>
+        </dev>
     )
 }
